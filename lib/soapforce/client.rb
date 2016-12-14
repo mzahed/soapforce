@@ -27,7 +27,8 @@ module Soapforce
 
       @logger = options[:logger] || false
       # Due to recent SSLv3 POODLE vulnerabilty we default to TLSv1
-      @ssl_version = options[:ssl_version] || :TLSv1
+      @ssl_version = options[:ssl_version] || :TLSv1_2
+
 
       @client = Savon.client(
         wsdl: @wsdl,
